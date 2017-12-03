@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">JokaramaRedeux</string>
+    <string name="num_jokes_subtitle">%1$d jokes %2$d completed</string>
+    <string name="reset_jokes">Reset</string>
 </resources>
