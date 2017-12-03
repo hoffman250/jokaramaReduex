@@ -4,6 +4,7 @@ import android.content.Context;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.UUID;
 
 /**
  * Created by brianhoffman on 12/2/17.
@@ -32,5 +33,18 @@ public class JokeRepo {
             joke.setLine4("pain in the ");
             joke.setLine5("ass.");
         }
+    }
+
+    public List<Joke> getJokes() {
+        return mJokes;
+    }
+
+    public Joke getJoke(UUID id) {
+        for (Joke joke: mJokes) {
+            if(joke.getID().equals(id)) {
+                return joke;
+            }
+        }
+        return null;
     }
 }
