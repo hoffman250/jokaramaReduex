@@ -39,22 +39,22 @@ public class JokeFragment extends Fragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        UUID jokeID = (UUID) getArguments().getSerializable(ARG_JOKE_ID);
-        mJoke = JokeRepo.get(getActivity()).getJoke(jokeID);
+        UUID jokeId = (UUID) getArguments().getSerializable(ARG_JOKE_ID);
+        mJoke = JokeRepo.get(getActivity()).getJoke(jokeId);
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View v = inflater.inflate(fragment_joke, container, false);
 
-        mNameField = (TextView) v.findViewById(R.id.joke_name);
+        mNameField = (TextView)v.findViewById(R.id.joke_name);
         mNameField.setText(mJoke.getName());
 
-        mLine1Field = (TextView) v.findViewById(R.id.joke_line_1);
-        mLine2Field = (TextView) v.findViewById(R.id.joke_line_2);
-        mLine3Field = (TextView) v.findViewById(R.id.joke_line_3);
-        mLine4Field = (TextView) v.findViewById(R.id.joke_line_4);
-        mLine5Field = (TextView) v.findViewById(R.id.joke_line_5);
+        mLine1Field = (TextView)v.findViewById(R.id.joke_line_1);
+        mLine2Field = (TextView)v.findViewById(R.id.joke_line_2);
+        mLine3Field = (TextView)v.findViewById(R.id.joke_line_3);
+        mLine4Field = (TextView)v.findViewById(R.id.joke_line_4);
+        mLine5Field = (TextView)v.findViewById(R.id.joke_line_5);
 
         v.setOnClickListener(new View.OnClickListener() {
             int click = 0;
@@ -64,13 +64,13 @@ public class JokeFragment extends Fragment {
                 if (click == 1) {
                     mLine1Field.setText(mJoke.getLine1());
                 } else if (click == 2) {
-                    mLine1Field.setText(mJoke.getLine2());
+                    mLine2Field.setText(mJoke.getLine2());
                 } else if (click == 3) {
-                    mLine1Field.setText(mJoke.getLine3());
+                    mLine3Field.setText(mJoke.getLine3());
                 } else if (click == 4) {
-                    mLine1Field.setText(mJoke.getLine4());
+                    mLine4Field.setText(mJoke.getLine4());
                 } else if (click == 5) {
-                    mLine1Field.setText(mJoke.getLine5());
+                    mLine5Field.setText(mJoke.getLine5());
                     mJoke.setCompleted(true);
                 } else {
                     return;

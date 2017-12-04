@@ -32,6 +32,7 @@ public class JokeRepo {
             joke.setLine3("a major ");
             joke.setLine4("pain in the ");
             joke.setLine5("ass.");
+            mJokes.add(joke);
         }
     }
 
@@ -41,7 +42,7 @@ public class JokeRepo {
 
     public Joke getJoke(UUID id) {
         for (Joke joke: mJokes) {
-            if(joke.getID().equals(id)) {
+            if(joke.getId().equals(id)) {
                 return joke;
             }
         }

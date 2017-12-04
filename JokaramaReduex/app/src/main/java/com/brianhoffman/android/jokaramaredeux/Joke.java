@@ -7,7 +7,7 @@ import java.util.UUID;
  */
 
 public class Joke {
-    private UUID mID;
+    private UUID mId;
     private String mName;
     private String mLine1;
     private String mLine2;
@@ -16,8 +16,12 @@ public class Joke {
     private String mLine5;
     private boolean mCompleted;
 
-    public UUID getID() {
-        return mID;
+    public Joke() {
+        mId = UUID.randomUUID();
+    }
+
+    public UUID getId() {
+        return mId;
     }
 
     public String getName() {

@@ -8,7 +8,7 @@ import java.util.UUID;
 
 public class JokeActivity extends SingleFragmentActivity {
 
-    private static final String EXTRA_JOKE_ID = "com.brianhoffman.android.jokaramredeux.joke_id";
+    private static final String EXTRA_JOKE_ID = "com.brianhoffman.android.jokaramaredeux.joke_id";
 
     public static Intent newIntent(Context packageContext, UUID jokeId) {
         Intent intent = new Intent(packageContext, JokeActivity.class);
